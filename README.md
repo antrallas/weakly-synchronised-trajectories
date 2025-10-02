@@ -1,6 +1,6 @@
 # weakly-synchronised-trajectories
 
-Code repository accompanying the publication entitled "On the behavior of Linear Dependence, Smaller, and Generalized Alignment Indices in chaotic discrete and continuous systems" by M. Rolim Sales, E. D. Leonel, and C. G. Antonopoulos.
+Code repository accompanying the publication entitled "Chaotic prediction using weakly-synchronised trajectories and machine learning" by Anthony Miller, Zoe Bartlett, and Chris. G. Antonopoulos.
 
 This project contains the code to generate and plot all the data from all figures.
 

@@ -16,7 +16,7 @@ This project contains the code to generate and plot all the data from all figure
 For questions, suggestions, or collaboration, please reach out to:
 
 📧 [am22990[at]essex.ac.uk](mailto:am22990@essex.ac.uk)  
-🔗 [antrallas.com](http://antrallas.com)
+🔗 [anthonymiller.me](https://anthonymiller.me)
 
 ## License
 

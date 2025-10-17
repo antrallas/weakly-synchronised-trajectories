@@ -509,7 +509,7 @@ def main():
 
     # Configuration: integration parameters
     dt = 0.01  # Integration time step (0.01 time units)
-    T1 = 100  # Attractor convergence time (5000 time units = 500,000 points)
+    T1 = 5000  # Attractor convergence time (5000 time units = 500,000 points)
     T2 = 20  # Training trajectory length (20 time units = 2,000 points)
 
     t1 = np.arange(0, T1 + dt, dt)  # Time points for attractor integration

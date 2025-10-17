@@ -4,6 +4,9 @@ Initial Condition Generator for Chaotic System Analysis
 This script generates random initial conditions uniformly distributed within
 a cubic domain for numerical experiments with dynamical systems.
 
+Example arguments:
+-n 10 -s 42 -d baseline
+
 Author: Anthony S. Miller, University of Essex
 Date: 17/10/2025
 """

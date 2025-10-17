@@ -13,6 +13,7 @@ from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 import json
 from json import JSONEncoder
 import warnings
+import os
 
 warnings.simplefilter("ignore")
 
@@ -20,7 +21,7 @@ warnings.simplefilter("ignore")
 class NumpyArrayEncoder(JSONEncoder):
     """
     Custom JSON encoder for NumPy arrays.
-    
+
     Converts NumPy arrays to Python lists for JSON serialization.
     """
     def default(self, obj):
@@ -32,7 +33,7 @@ class NumpyArrayEncoder(JSONEncoder):
 def parse_arguments():
     """
     Parse command line arguments.
-    
+
     Returns:
         dict: Dictionary containing parsed arguments
     """
@@ -61,14 +62,26 @@ def parse_arguments():
     return vars(parser.parse_args())
 
 
+def ensure_directory_exists(directory):
+    """
+    Create directory if it doesn't exist.
+
+    Parameters:
+        directory (str): Path to directory
+    """
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+        print(f'Created directory: {directory}')
+
+
 def generate_initial_conditions(number, seed):
     """
     Generate random initial conditions uniformly distributed in a cubic domain.
-    
+
     Parameters:
         number (int): Number of initial conditions to generate
         seed (int): Random seed for reproducibility
-        
+
     Returns:
         np.ndarray: Array of shape (number, 3) containing initial conditions
     """
@@ -81,7 +94,7 @@ def generate_initial_conditions(number, seed):
 def save_initial_conditions(x0s, filename):
     """
     Save initial conditions to JSON file.
-    
+
     Parameters:
         x0s (np.ndarray): Array of initial conditions
         filename (str): Output filename
@@ -100,9 +113,12 @@ def main():
     number = args["number"]
     seed = args["seed"]
     dataset_name = args["datasetName"]
-    
+
     # Configuration
     data_dir = './_DataFiles/'
+
+    # Ensure output directory exists
+    ensure_directory_exists(data_dir)
     
     # Seed reference guide (for reproducibility of published results):
     # Training Set (Original): seed = 42, datasetName = "baseline"

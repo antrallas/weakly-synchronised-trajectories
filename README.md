@@ -1,6 +1,6 @@
 # weakly-synchronised-trajectories
 
-Code repository accompanying the publication entitled "Chaotic prediction using weakly-synchronised trajectories and machine learning" by Anthony Miller, Zoe Bartlett, and Chris. G. Antonopoulos.
+Code repository accompanying the publication entitled "Chaotic prediction using weakly-synchronised trajectories and machine learning" by Anthony S. Miller, Zoe Bartlett, and Chris. G. Antonopoulos.
 
 This project contains the code to generate and plot all the data from all figures.
 

@@ -17,6 +17,9 @@ Key features:
 - Probability density function estimation with multiple distributional fits
 - Optimal binning using Freedman-Diaconis, Scott, or Sturges rules
 
+Example arguments:
+-m ModelA -d ./_PredictionOutput/ModelA/ -ic IC_x0_1000_LP_P.json --perturbation 10e-11
+
 Author: Anthony S. Miller, University of Essex
 Date: 17/10/2025
 """

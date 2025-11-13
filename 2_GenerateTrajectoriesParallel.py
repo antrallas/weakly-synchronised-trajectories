@@ -584,7 +584,10 @@ def main():
 
         # Save training trajectories
         print('\nSaving training trajectories...')
-        save_json(training_trajectories, output_trajectories_file, "trajectories")
+        print(f'Saving to: {output_trajectories_file}')
+        with open(output_trajectories_file, 'w') as f:
+            json.dump(training_trajectories, f, cls=NumpyArrayEncoder)
+        print(f"Successfully saved to: {output_trajectories_file}")
 
         # Print summary statistics
         print("\n" + "=" * 50)
